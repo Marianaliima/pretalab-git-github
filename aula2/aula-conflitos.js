@@ -1,4 +1,5 @@
 const pessoa = {
-    nome: "mariana",
-    idade: "29"
+    nome: "thaysa",
+    idade: "30",
+    apelido: "thay"
 }
