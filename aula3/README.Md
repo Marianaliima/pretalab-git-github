@@ -1,93 +1,21 @@
-# Criando meu primeiro repositório
+# Diferença entre Fork e Clone:
+# Fork
+- O fork é geralmente feito em plataformas como GitHub, GitLab, e Bitbucket.Quando você faz um fork, cria uma  cópia do repositório de outra pessoa na sua conta.
 
-O Repositório é um local onde os arquivos de um projeto, incluindo o histórico de suas alterações, são armazenados e gerenciados utilizando o sistema de controle de versão Git. Ele permite que os usuários colaborem, façam alterações, rastreie mudanças e mantenha a integridade dos arquivos do projeto.
+- Essa cópia está independente do repositório original, mas você pode sincronizar mudanças.
 
-1. Acesse o seu github e façá login
-2. Na página inicial, no canto superior direito, clique em `+` e escolha a opção `Novo repositório`
-3. Dê um nome ao seu repositório, defina se será publico ou privado e por fim, clique em `Criar repositório` para finalizar a criação
+- Fork é comum para colaborar em projetos de código aberto ou para fazer contribuições em um repositório que você não tem permissão de escrita direta.
 
-# Principais Comandos do Git e GitHub
+# Clone:
 
-Aqui está uma lista dos comandos mais importantes do Git e como usá-los no GitHub. Esses comandos permitem que você inicialize projetos, rastreie alterações no código, e faça upload para o GitHub, facilitando o desenvolvimento colaborativo.
+- O clone é o comando git clone que cria uma cópia local do repositório no seu computador.
 
-#### 1. **Instalação do Git**
-   Antes de tudo, você precisa instalar o Git. Baixe em [https://git-scm.com/downloads](https://git-scm.com/downloads) e siga as instruções para o seu sistema operacional.
+- Com o clone, você tem todos os arquivos e o histórico do repositório original, e pode trabalhar offline.
 
-#### 2. **Configurando o Git**
-   Após a instalação, configure seu nome de usuário e e-mail, que aparecerão nas suas contribuições:
-   ```bash
-   git config --global user.name "SeuNome"
-   git config --global user.email "seuemail@exemplo.com"
-   ```
+- Diferente do fork, o clone não cria uma cópia na sua conta remota; ele é apenas uma cópia local.
 
-#### 3. **Verificando as configurações do git**
-   Após as configurações serem atribuídas, elas podem ser verificadas a qualquer momento usando:
-   ```bash
-   git config --list
-   ```
+# Revisão
 
-#### 4. **Clonando um Repositório**
-   Para baixar um repositório existente do GitHub para o seu computador, use o `git clone` seguido da URL do repositório:
-   ```bash
-   git clone https://github.com/usuario/repositorio.git
-   ```
+Fork: Cria uma cópia independente na sua conta para que você possa modificar e sugerir mudanças (PR) sem precisar de permissão direta no repositório original.
 
-#### 5. **Adicionando Mudanças**
-   Depois de fazer alterações em seus arquivos, você precisa "adicioná-los" ao seu próximo commit. Use `git add` para isso:
-   ```bash
-   git add nome_do_arquivo    # Adiciona um arquivo específico
-   git add .                  # Adiciona todos os arquivos modificados
-   ```
-
-#### 6. **Removendo Mudanças**
-   Depois de adicionar, preparando seus arquivos para commit, você pode precisar "removê-los". Use `git reset` para isso:
-   ```bash
-   git reset nome_do_arquivo      # Remove um arquivo específico
-   git reset .                    # Remove todos os arquivos adicionados
-   ```
-
-#### 7. **Criando um Commit**
-   Para salvar as mudanças no repositório local, você cria um "commit" com uma mensagem descritiva sobre as alterações feitas:
-   ```bash
-   git commit -m "Mensagem descrevendo as alterações"
-   ```
-   conventional commits: feat, fix, style, docs, revert.
-
-#### 8. **Removendo um commit local**
-   Para apagar um commit feito enquanto está apenas localmente:
-   ```bash
-   git reset HEAD~      # Reverte o último commit local
-   git reset HEAD~2     # Reverte a quantidade de commits locais que você passar após `~`
-   ```
-   [leia mais sobre reverter commits](https://medium.com/@dieggocarrilho/como-desfazer-commit-local-e-remoto-a6409f0388d4)
-   
-#### 9. **Enviando para o GitHub (Push)**
-   Envie as alterações do seu repositório local para o repositório remoto no GitHub com `git push`:
-   ```bash
-   git push origin main       # Envia as mudanças para a branch 'main' no GitHub
-   ```
-
-#### 10. **Atualizando o Repositório Local (Pull)**
-   Para sincronizar seu repositório local com as mudanças feitas por outras pessoas no repositório do GitHub, use `git pull`:
-   ```bash
-   git pull origin main
-   ```
-
-#### 11. **Verificando o Status**
-   O comando `git status` exibe quais arquivos foram alterados, adicionados ou ainda não foram commitados, permitindo que você veja o que está acontecendo no repositório:
-   ```bash
-   git status
-   ```
-
-#### 12. **Verificando o Histórico de Commits**
-   Use `git log` para visualizar o histórico de commits e ver as mudanças feitas ao longo do tempo:
-   ```bash
-   git log
-   ```
-
-#### 13. **Reservando alterações**
-   O git stash é um comando do Git que permite salvar temporariamente as alterações no seu ambiente de trabalho (os arquivos que estão modificados ou não commitados) sem precisar fazer um commit.
-   ```bash
-   git stash        # armazena as mudanças
-   git stash pop    # trás de volta para o código as mudanças anteriormente armazenadas
-   ```
+Clone: Apenas copia o repositório para o seu computador, mas não cria uma versão sua no GitHub/GitLab e não dá permissão de fazer push de volta ao original sem autorização.
